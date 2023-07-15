@@ -20,7 +20,7 @@ if( isset( $_POST['email'] ) )
     
     $record = mysqli_fetch_assoc( $result );
     
-    $_SESSION['id'] = $record['id'];
+    $_SESSION['user_id'] = $record['user_id'];
     $_SESSION['email'] = $record['email'];
     
     header( 'Location: dashboard.php' );

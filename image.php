@@ -19,7 +19,7 @@ switch( $_GET['type'] )
     
     $query = 'SELECT photo 
       FROM projects
-      WHERE id = '.$_GET['id'].'
+      WHERE id = '.$_GET['user_id'].'
       LIMIT 1';
     $result = mysqli_query( $connect, $query );
     $record = mysqli_fetch_assoc( $result );

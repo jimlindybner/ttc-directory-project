@@ -16,7 +16,7 @@
   
   <h1>Website Admin</h1>
   
-  <?php if(isset($_SESSION['id'])): ?>
+  <?php if(isset($_SESSION['user_id'])): ?>
 
     <p style="padding: 0 1%; text-align: center;">
       <a href="dashboard.php">Dashboard</a> | 

@@ -6,7 +6,7 @@ include( 'includes/functions.php' );
 
 secure();
 
-if( !isset( $_GET['id'] ) )
+if( !isset( $_GET['user_id'] ) )
 {
   
   header( 'Location: users.php' );
@@ -25,7 +25,7 @@ if( isset( $_POST['first'] ) )
       last = "'.mysqli_real_escape_string( $connect, $_POST['last'] ).'",
       email = "'.mysqli_real_escape_string( $connect, $_POST['email'] ).'",
       active = "'.$_POST['active'].'"
-      WHERE id = '.$_GET['id'].'
+      WHERE id = '.$_GET['user_id'].'
       LIMIT 1';
     mysqli_query( $connect, $query );
     
@@ -34,7 +34,7 @@ if( isset( $_POST['first'] ) )
       
       $query = 'UPDATE users SET
         password = "'.md5( $_POST['password'] ).'"
-        WHERE id = '.$_GET['id'].'
+        WHERE id = '.$_GET['user_id'].'
         LIMIT 1';
       mysqli_query( $connect, $query );
       
@@ -50,12 +50,12 @@ if( isset( $_POST['first'] ) )
 }
 
 
-if( isset( $_GET['id'] ) )
+if( isset( $_GET['user_id'] ) )
 {
   
   $query = 'SELECT *
     FROM users
-    WHERE id = '.$_GET['id'].'
+    WHERE id = '.$_GET['user_id'].'
     LIMIT 1';
   $result = mysqli_query( $connect, $query );
   
