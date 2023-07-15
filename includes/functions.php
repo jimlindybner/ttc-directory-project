@@ -24,7 +24,7 @@ function pre( $data )
 function secure()
 {
   
-  if( !isset( $_SESSION['id'] ) )
+  if( !isset( $_SESSION['user_id'] ) )
   {
     
     header( 'Location: /' );
