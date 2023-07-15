@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
   
-  <title>Website Admin</title>
+  <title>TTC Subway Directory</title>
   
   <link href="styles.css" type="text/css" rel="stylesheet">
   
