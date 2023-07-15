@@ -117,3 +117,7 @@ UPDATE `stations`
 UPDATE `stations`
     SET `streetcar` = 'Y'
     WHERE `station_id` IN (13, 16, 8, 14, 15, 18, 19, 20, 21, 26, 52, 56, 24, 47, 63, 17);
+
+UPDATE `stations`
+    SET `accessibility` = 'N'
+    WHERE `station_id` IN (5, 9, 10, 22, 28, 40, 42, 45, 51, 55, 59, 60, 65, 67, 68, 69, 71, 13, 16);
