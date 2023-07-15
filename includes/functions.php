@@ -57,3 +57,11 @@ function get_message()
   }
   
 }
+
+function yesno($record){
+  if($record == 'Y'){
+    echo 'yes';
+  } else if($record == 'N'){
+    echo 'no';
+  }
+}

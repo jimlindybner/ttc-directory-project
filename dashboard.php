@@ -13,12 +13,12 @@ include( 'includes/header.php' );
 <ul id="dashboard">
   <li>
     <a href="stations.php">
-      Manage Stations
+      Manage Stations &#128646;
     </a>
   </li>
   <li>
     <a href="users.php">
-      Manage Users
+      Manage Users &#129504;
     </a>
   </li>
   <li>

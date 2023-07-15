@@ -48,11 +48,11 @@ if( isset( $_GET['station_id'] ) )
 include( 'includes/header.php' );
 ?>
 
-<h2><?php echo htmlentities( $record['station_name'] ); ?></h2>
+<h2>&#128646; <?php echo htmlentities( $record['station_name'] ); ?></h2>
 
-<div>Washroom: <?php echo $record['washroom']; ?></div>
-<div>Accessible: <?php echo $record['accessibility']; ?></div>
-<div>Streetcar: <?php echo $record['streetcar']; ?></div>
+<div>Washroom: <?php yesno($record['washroom']); ?></div>
+<div>Accessible: <?php yesno($record['accessibility']); ?></div>
+<div>Streetcar: <?php yesno($record['streetcar']); ?></div>
 
 <div>
   <a href="stations_edit.php?station_id=<?php echo $record['station_id']; ?>">Edit</a>
