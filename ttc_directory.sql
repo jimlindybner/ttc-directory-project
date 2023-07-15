@@ -113,3 +113,7 @@ VALUES
 UPDATE `stations`
     SET `washroom` = 'Y'
     WHERE `station_id` IN (1, 3, 75, 32, 31, 6, 39, 11, 65, 66);
+
+UPDATE `stations`
+    SET `streetcar` = 'Y'
+    WHERE `station_id` IN (13, 16, 8, 14, 15, 18, 19, 20, 21, 26, 52, 56, 24, 47, 63, 17);
