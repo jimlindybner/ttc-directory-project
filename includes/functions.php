@@ -60,8 +60,8 @@ function get_message()
 
 function yesno($record){
   if($record == 'Y'){
-    echo 'yes';
+    echo 'Yes';
   } else if($record == 'N'){
-    echo 'no';
+    echo 'No';
   }
 }
