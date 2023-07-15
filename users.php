@@ -10,7 +10,7 @@ if( isset( $_GET['delete'] ) )
 {
   
   $query = 'DELETE FROM users
-    WHERE id = '.$_GET['delete'].'
+    WHERE user_id = '.$_GET['delete'].'
     LIMIT 1';
   mysqli_query( $connect, $query );
   
