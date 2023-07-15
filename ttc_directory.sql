@@ -15,6 +15,8 @@ INSERT INTO `users`
 VALUES
     (NULL, "Jane", "Doe", "email@email.com", "password", "Yes", CURRENT_TIMESTAMP)
 
+UPDATE `users` SET `password` = MD5('password') WHERE `users`.`user_id` = 1
+
 -- Create stations table
 CREATE TABLE
     `ttc_directory`.`stations`
