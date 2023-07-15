@@ -28,7 +28,7 @@ CREATE TABLE
 
 -- SET washroom, accessibility, streetcar default to 'N'
 ALTER TABLE `stations` CHANGE `washroom` `washroom` ENUM('Y','N') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'N';
-ALTER TABLE `stations` CHANGE `accessibility` `accessibility` ENUM('Y','N') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'N';
+ALTER TABLE `stations` CHANGE `accessibility` `accessibility` ENUM('Y','N') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'Y';
 ALTER TABLE `stations` CHANGE `streetcar` `streetcar` ENUM('Y','N') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'N';
 
 -- Insert ttc station information
