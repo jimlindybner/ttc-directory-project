@@ -25,7 +25,7 @@ if( isset( $_POST['first'] ) )
       last = "'.mysqli_real_escape_string( $connect, $_POST['last'] ).'",
       email = "'.mysqli_real_escape_string( $connect, $_POST['email'] ).'",
       active = "'.$_POST['active'].'"
-      WHERE id = '.$_GET['user_id'].'
+      WHERE user_id = '.$_GET['user_id'].'
       LIMIT 1';
     mysqli_query( $connect, $query );
     
@@ -34,7 +34,7 @@ if( isset( $_POST['first'] ) )
       
       $query = 'UPDATE users SET
         password = "'.md5( $_POST['password'] ).'"
-        WHERE id = '.$_GET['user_id'].'
+        WHERE user_id = '.$_GET['user_id'].'
         LIMIT 1';
       mysqli_query( $connect, $query );
       
