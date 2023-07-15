@@ -14,7 +14,7 @@
 </head>
 <body>
   
-  <h1>Website Admin</h1>
+  <h1>TTC Subway Directory</h1>
   
   <?php if(isset($_SESSION['user_id'])): ?>
 
