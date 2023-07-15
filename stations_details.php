@@ -54,7 +54,7 @@ include( 'includes/header.php' );
 <div>Accessible:<?php echo $record['accessibility']; ?></div>
 <div>Streetcar:<?php echo $record['streetcar']; ?></div>
 
-<a href="stations_edit.php?station_id=<?php echo $record['station_id']; ?>">Edit</a></td>
+<a href="stations_edit.php?station_id=<?php echo $record['station_id']; ?>">Edit</a> |
 
 <a href="stations.php?delete=<?php echo $record['station_id']; ?>" onclick="javascript:return confirm('Are you sure you want to delete this station?');">Delete</a>
 
