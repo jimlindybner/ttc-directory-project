@@ -1,3 +1,19 @@
+-- Table structure for table `users`
+CREATE TABLE `users` (
+  `user_id` INT NOT NULL AUTO_INCREMENT,
+  `first` varchar(25) DEFAULT NULL,
+  `last` varchar(25) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `active` enum("Yes","No") NOT NULL DEFAULT "Yes",
+  `dateAdded` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `users` (`user_id`, `first`, `last`, `email`, `password`, `active`, `dateAdded`)
+VALUES
+    (NULL, "Jane", "Doe", "email@email.com", "password", "Yes", CURRENT_TIMESTAMP)
+
 -- Create sations table
 CREATE TABLE
     `ttc_directory`.`stations`
