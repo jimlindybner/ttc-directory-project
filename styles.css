@@ -77,7 +77,7 @@ input {
 
 input[type=submit] {
   border: 0;
-  background-color: #eb741d;
+  background-color: #D9251C;
   color: #fff;
   padding: 10px 10px;
   font-size: 110%;
@@ -96,7 +96,7 @@ input[type=submit] {
   color: #fff;
 }
 #dashboard li {
-  background-color: #eb741d;
+  background-color: #D9251C;
   display: inline-block;
   width: 22%;
   margin: 1%;
