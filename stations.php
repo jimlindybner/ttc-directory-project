@@ -35,8 +35,6 @@ $result = mysqli_query( $connect, $query );
 <table>
   <tr>
     <th align="left">Station Name</th>
-    <th></th>
-    <th></th>
   </tr>
   <?php while( $record = mysqli_fetch_assoc( $result ) ): ?>
     <tr>
