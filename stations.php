@@ -42,9 +42,6 @@ $result = mysqli_query( $connect, $query );
   <?php while( $record = mysqli_fetch_assoc( $result ) ): ?>
     <tr>
       <td align="left"><a href="stations_details.php?station_id=<?php echo $record['station_id']; ?>"><?php echo htmlentities( $record['station_name'] ); ?></td>
-      <!-- <td align="center"><?php //echo $record['washroom']; ?></td>
-      <td align="center"><?php //echo $record['accessibility']; ?></td>
-      <td align="center"><?php //echo $record['streetcar']; ?></td> -->
       <td align="center"><a href="stations_edit.php?station_id=<?php echo $record['station_id']; ?>">Edit</a></td>
       <td align="center">
         <a href="stations.php?delete=<?php echo $record['station_id']; ?>" onclick="javascript:return confirm('Are you sure you want to delete this station?');">Delete</a>
