@@ -6,32 +6,30 @@ include( 'includes/functions.php' );
 
 secure();
 
-if( isset( $_POST['title'] ) )
+if( isset( $_POST['station_name'] ) )
 {
   
-  if( $_POST['title'] and $_POST['content'] )
+  if( $_POST['station_name'] and $_POST['washroom'] and $_POST['accessibility'] and $_POST['streetcar'] )
   {
     
-    $query = 'INSERT INTO projects (
-        title,
-        content,
-        date,
-        type,
-        url
+    $query = 'INSERT INTO `stations` (
+        `station_name`,
+        `washroom`,
+        `accessibility`,
+        `streetcar`
       ) VALUES (
-         "'.mysqli_real_escape_string( $connect, $_POST['title'] ).'",
-         "'.mysqli_real_escape_string( $connect, $_POST['content'] ).'",
-         "'.mysqli_real_escape_string( $connect, $_POST['date'] ).'",
-         "'.mysqli_real_escape_string( $connect, $_POST['type'] ).'",
-         "'.mysqli_real_escape_string( $connect, $_POST['url'] ).'"
+         "'.mysqli_real_escape_string( $connect, $_POST['station_name'] ).'",
+         "'.mysqli_real_escape_string( $connect, $_POST['washroom'] ).'",
+         "'.mysqli_real_escape_string( $connect, $_POST['accessibility'] ).'",
+         "'.mysqli_real_escape_string( $connect, $_POST['streetcar'] ).'"
       )';
     mysqli_query( $connect, $query );
     
-    set_message( 'Project has been added' );
+    set_message( 'Station has been added' );
     
   }
   
-  header( 'Location: projects.php' );
+  header( 'Location: stations.php' );
   die();
   
 }
@@ -40,65 +38,44 @@ include( 'includes/header.php' );
 
 ?>
 
-<h2>Add Project</h2>
+<h2>Add Station</h2>
 
 <form method="post">
   
-  <label for="title">Title:</label>
-  <input type="text" name="title" id="title">
+  <label for="station_name">Station Name:</label>
+  <input type="text" name="station_name" id="station_name">
     
   <br>
   
-  <label for="content">Content:</label>
-  <textarea type="text" name="content" id="content" rows="10"></textarea>
-      
-  <script>
+  <label for="washroom">Washroom:</label>
+  <select name="washroom" id="washroom">
+    <option value="Y">Yes</option>
+    <option value="N">No</option>
+  </select>
 
-  ClassicEditor
-    .create( document.querySelector( '#content' ) )
-    .then( editor => {
-        console.log( editor );
-    } )
-    .catch( error => {
-        console.error( error );
-    } );
-    
-  </script>
+  <br>
+
+  <label for="accessibility">Accessibility:</label>
+  <select name="accessibility" id="accessibility">
+    <option value="Y">Yes</option>
+    <option value="N">No</option>
+  </select>
+
+  <br>
+
+  <label for="streetcar">Streetcar:</label>
+  <select name="streetcar" id="streetcar">
+    <option value="Y">Yes</option>
+    <option value="N">No</option>
+  </select>
   
   <br>
   
-  <label for="url">URL:</label>
-  <input type="text" name="url" id="url">
-  
-  <br>
-  
-  <label for="date">Date:</label>
-  <input type="date" name="date" id="date">
-  
-  <br>
-  
-  <label for="type">Type:</label>
-  <?php
-  
-  $values = array( 'Website', 'Graphic Design' );
-  
-  echo '<select name="type" id="type">';
-  foreach( $values as $key => $value )
-  {
-    echo '<option value="'.$value.'"';
-    echo '>'.$value.'</option>';
-  }
-  echo '</select>';
-  
-  ?>
-  
-  <br>
-  
-  <input type="submit" value="Add Project">
+  <input type="submit" value="Add Station">
   
 </form>
 
-<p><a href="projects.php"><i class="fas fa-arrow-circle-left"></i> Return to Project List</a></p>
+<p><a href="stations.php"><i class="fas fa-arrow-circle-left"></i> Return to Station List</a></p>
 
 
 <?php

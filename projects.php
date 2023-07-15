@@ -8,64 +8,52 @@ secure();
 
 if( isset( $_GET['delete'] ) )
 {
-  
-  $query = 'DELETE FROM projects
-    WHERE id = '.$_GET['delete'].'
+  $query = 'DELETE FROM `stations`
+    WHERE `station_id` = '.$_GET['delete'].'
     LIMIT 1';
   mysqli_query( $connect, $query );
     
-  set_message( 'Project has been deleted' );
+  set_message( 'Station information has been deleted' );
   
-  header( 'Location: projects.php' );
+  header( 'Location: stations.php' );
   die();
-  
 }
 
 include( 'includes/header.php' );
 
 $query = 'SELECT *
-  FROM projects
-  ORDER BY date DESC';
+  FROM `stations`
+  ORDER BY `station_name` ASC';
 $result = mysqli_query( $connect, $query );
 
 ?>
 
-<h2>Manage Projects</h2>
+<h2>Manage Stations</h2>
 
 <table>
   <tr>
-    <th></th>
-    <th align="center">ID</th>
-    <th align="left">Title</th>
-    <th align="center">Type</th>
-    <th align="center">Date</th>
-    <th></th>
+    <th align="left">Station Name</th>
+    <th align="center">Washroom</th>
+    <th align="center">Accessibility</th>
+    <th align="center">Streetcar</th>
     <th></th>
     <th></th>
   </tr>
   <?php while( $record = mysqli_fetch_assoc( $result ) ): ?>
     <tr>
+      <td align="left"><?php echo htmlentities( $record['station_name'] ); ?></td>
+      <td align="center"><?php echo $record['washroom']; ?></td>
+      <td align="center"><?php echo $record['accessibility']; ?></td>
+      <td align="center"><?php echo $record['streetcar']; ?></td>
+      <td align="center"><a href="stations_edit.php?station_id=<?php echo $record['station_id']; ?>">Edit</a></td>
       <td align="center">
-        <img src="image.php?type=project&id=<?php echo $record['id']; ?>&width=300&height=300&format=inside">
-      </td>
-      <td align="center"><?php echo $record['id']; ?></td>
-      <td align="left">
-        <?php echo htmlentities( $record['title'] ); ?>
-        <small><?php echo $record['content']; ?></small>
-      </td>
-      <td align="center"><?php echo $record['type']; ?></td>
-      <td align="center" style="white-space: nowrap;"><?php echo htmlentities( $record['date'] ); ?></td>
-      <td align="center"><a href="projects_photo.php?id=<?php echo $record['id']; ?>">Photo</i></a></td>
-      <td align="center"><a href="projects_edit.php?id=<?php echo $record['id']; ?>">Edit</i></a></td>
-      <td align="center">
-        <a href="projects.php?delete=<?php echo $record['id']; ?>" onclick="javascript:confirm('Are you sure you want to delete this project?');">Delete</i></a>
+        <a href="stations.php?delete=<?php echo $record['station_id']; ?>" onclick="javascript:return confirm('Are you sure you want to delete this station?');">Delete</a>
       </td>
     </tr>
   <?php endwhile; ?>
 </table>
 
-<p><a href="projects_add.php"><i class="fas fa-plus-square"></i> Add Project</a></p>
-
+<p><a href="stations_add.php"><i class="fas fa-plus-square"></i> Add Station</a></p>
 
 <?php
 
