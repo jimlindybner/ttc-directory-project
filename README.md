@@ -17,7 +17,10 @@ The super user can create, update, and delete the details of any of the other us
 A regular user can login to access the dashboard and view the station directory as well as each station's details but cannot perform any of the other actions that a super user can.
 
 
-
-
+## Collaborators
+- [williamphk](https://github.com/williamphk)
+- [yanwing61](https://github.com/yanwing61)
+- [SimonChung2](https://github.com/SimonChung2)
+- [jimlindybner](https://github.com/jimlindybner)
 
  
