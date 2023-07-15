@@ -43,4 +43,3 @@ VALUES
     (NULL, 'Jane', 'Doe', 'email@email.com', 'password', 'Yes', CURRENT_TIMESTAMP)
 
 -- Insert ttc station information
-INSERT INTO `staitons` (`station_name`)
