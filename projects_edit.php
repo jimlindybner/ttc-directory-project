@@ -4,7 +4,7 @@ include( 'includes/database.php' );
 include( 'includes/config.php' );
 include( 'includes/functions.php' );
 
-secure();
+// secure();
 
 if( !isset( $_GET['station_id'] ) )
 {
