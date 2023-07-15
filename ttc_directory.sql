@@ -14,7 +14,7 @@ INSERT INTO `users` (`user_id`, `first`, `last`, `email`, `password`, `active`, 
 VALUES
     (NULL, "Jane", "Doe", "email@email.com", "password", "Yes", CURRENT_TIMESTAMP)
 
--- Create sations table
+-- Create stations table
 CREATE TABLE
     `ttc_directory`.`stations`
     (
@@ -25,6 +25,11 @@ CREATE TABLE
         `streetcar` ENUM('Y','N') NOT NULL ,
         PRIMARY KEY (`station_id`)
     ) ENGINE = InnoDB;
+
+-- SET washroom, accessibility, streetcar default to 'N'
+ALTER TABLE `stations` CHANGE `washroom` `washroom` ENUM('Y','N') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'N';
+ALTER TABLE `stations` CHANGE `accessibility` `accessibility` ENUM('Y','N') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'N';
+ALTER TABLE `stations` CHANGE `streetcar` `streetcar` ENUM('Y','N') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'N';
 
 -- Insert ttc station information
 INSERT INTO `stations` (`station_name`)
