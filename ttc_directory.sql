@@ -10,7 +10,8 @@ CREATE TABLE `users` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `users` (`user_id`, `first`, `last`, `email`, `password`, `active`, `dateAdded`)
+INSERT INTO `users`
+    (`user_id`, `first`, `last`, `email`, `password`, `active`, `dateAdded`)
 VALUES
     (NULL, "Jane", "Doe", "email@email.com", "password", "Yes", CURRENT_TIMESTAMP)
 
