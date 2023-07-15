@@ -109,3 +109,7 @@ VALUES
     ("Bessarion"),
     ("Leslie"),
     ("Don Mills");
+
+UPDATE `stations`
+    SET `washroom` = 'Y'
+    WHERE `station_id` IN (1, 3, 75, 32, 31, 6, 39, 11, 65, 66);
