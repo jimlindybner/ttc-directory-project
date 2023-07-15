@@ -50,9 +50,9 @@ include( 'includes/header.php' );
 
 <h2><?php echo htmlentities( $record['station_name'] ); ?></h2>
 
-<div>Washroom:<?php echo $record['washroom']; ?></div>
-<div>Accessible:<?php echo $record['accessibility']; ?></div>
-<div>Streetcar:<?php echo $record['streetcar']; ?></div>
+<div>Washroom: <?php echo $record['washroom']; ?></div>
+<div>Accessible: <?php echo $record['accessibility']; ?></div>
+<div>Streetcar: <?php echo $record['streetcar']; ?></div>
 
 <a href="stations_edit.php?station_id=<?php echo $record['station_id']; ?>">Edit</a> |
 
