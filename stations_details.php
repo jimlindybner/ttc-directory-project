@@ -48,15 +48,17 @@ if( isset( $_GET['station_id'] ) )
 include( 'includes/header.php' );
 ?>
 
-<h2><?php echo htmlentities( $record['station_name'] ); ?></h2>
+<h2>&#128646; <?php echo htmlentities( $record['station_name'] ); ?></h2>
 
-<div>Washroom:<?php echo $record['washroom']; ?></div>
-<div>Accessible:<?php echo $record['accessibility']; ?></div>
-<div>Streetcar:<?php echo $record['streetcar']; ?></div>
+<div>Washroom: <?php yesno($record['washroom']); ?></div>
+<div>Accessible: <?php yesno($record['accessibility']); ?></div>
+<div>Streetcar: <?php yesno($record['streetcar']); ?></div>
 
-<a href="stations_edit.php?station_id=<?php echo $record['station_id']; ?>">Edit</a> |
-
-<a href="stations.php?delete=<?php echo $record['station_id']; ?>" onclick="javascript:return confirm('Are you sure you want to delete this station?');">Delete</a>
+<div>
+  <a href="stations_edit.php?station_id=<?php echo $record['station_id']; ?>">Edit</a>
+  |
+  <a href="stations.php?delete=<?php echo $record['station_id']; ?>" onclick="javascript:return confirm('Are you sure you want to delete this station?');">Delete</a>
+</div>
 
 <p><a href="stations.php"><i class="fas fa-arrow-circle-left"></i> Return to Station List</a></p>
 

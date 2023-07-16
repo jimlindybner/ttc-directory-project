@@ -28,7 +28,7 @@ $result = mysqli_query( $connect, $query );
 
 ?>
 
-<h2>Manage Stations</h2>
+<h2>Manage Stations &#128646;</h2>
 
 <p><a href="stations_add.php"><i class="fas fa-plus-square"></i> Add Station</a></p>
 
