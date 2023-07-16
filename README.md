@@ -21,11 +21,8 @@ To access the features and functionalities of this project, different levels of 
 ### Admin User 
 
 An admin user can manage the station listing and station details in the system. To gain access, the admin user must first log in. Once logged in, the following actions are available:
-## Collaborators
-- [williamphk](https://github.com/williamphk)
-- [yanwing61](https://github.com/yanwing61)
-- [SimonChung2](https://github.com/SimonChung2)
-- [jimlindybner](https://github.com/jimlindybner)1.	Dashboard: The super user can access the dashboard, which serves as the main control panel.
+
+1.	Dashboard: The super user can access the dashboard, which serves as the main control panel.
 2.	TTC Subway Stations: From the dashboard, the super user can access a list of all the TTC subway stations. The super user can also add a new station to the list
 3.	Station Details: When viewing the subway stations list, the super user can click on a specific station to access its details. This includes the accessibility status, availability of washrooms, and information about streetcars at each station. 
 4.	Edit and Delete Station Details: On the station details page, the super user has the ability to edit and the details of any station, updating information as necessary, or delete the station from the listing
@@ -36,3 +33,9 @@ A super user has the highest level of access to the system. In addition to the s
 
 1.	Other Users: From the dashboard, the super user can access a list of all other users registered in the system.
 2.	User Management: The super user can add or delete users from the system. The super user can also edit the details of existing users.
+
+## Collaborators
+- [williamphk](https://github.com/williamphk)
+- [yanwing61](https://github.com/yanwing61)
+- [SimonChung2](https://github.com/SimonChung2)
+- [jimlindybner](https://github.com/jimlindybner)
