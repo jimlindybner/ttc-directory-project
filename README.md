@@ -4,20 +4,32 @@
 *This application provides a directory of TTC Subway stations. From this directory, users can check the accessibility status, and the availbility of washrooms and streetcars at each station.*
 
 
-## Features
-A super user will first have to login to access the dashboard.
-From the dashboard, the super user can view a list of all the TTC subway stations.
-The super user can click on a station to view the accessibility status, the availability of washrooms and streetcars at each station.
-The super user can edit details on the station details page.
+## Database
 
+The database was created using MySQL and contains two tables. The first table is the users table.
 
-From the dashboard, the super user can view a list of all the other users.
-The super user can create, update, and delete the details of any of the other users.
+Example:
 
-A regular user can login to access the dashboard and view the station directory as well as each station's details but cannot perform any of the other actions that a super user can.
+| user_id | first | last | email | password | active | dateAdded |
+| ------- | ----- | ---- | ----- | -------- | ------ | --------- |
+| 1 | Professor | Maximus | maximus@professor.com | c4ca4238a0b923820dcc509a6f75849b | Yes | 2023-07-15
 
+## Access
 
+To access the features and functionalities of this project, different levels of user roles are defined: Super User and Admin User. The access permissions and capabilities of each user role are outlined below:
 
+### Admin User 
 
+An admin user can manage the station listing and station details in the system. To gain access, the admin user must first log in. Once logged in, the following actions are available:
 
- 
+1.	Dashboard: The super user can access the dashboard, which serves as the main control panel.
+2.	TTC Subway Stations: From the dashboard, the super user can access a list of all the TTC subway stations. The super user can also add a new station to the list
+3.	Station Details: When viewing the subway stations list, the super user can click on a specific station to access its details. This includes the accessibility status, availability of washrooms, and information about streetcars at each station. 
+4.	Edit and Delete Station Details: On the station details page, the super user has the ability to edit and the details of any station, updating information as necessary, or delete the station from the listing
+
+### Super User 
+
+A super user has the highest level of access to the system. In addition to the same privileges that an admin user has, a super user can also do the following:
+
+1.	Other Users: From the dashboard, the super user can access a list of all other users registered in the system.
+2.	User Management: The super user can add or delete users from the system. The super user can also edit the details of existing users.
