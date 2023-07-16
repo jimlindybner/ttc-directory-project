@@ -12,7 +12,20 @@ Example:
 
 | user_id | first | last | email | password | active | dateAdded |
 | ------- | ----- | ---- | ----- | -------- | ------ | --------- |
-| 1 | Professor | Maximus | maximus@professor.com | c4ca4238a0b923820dcc509a6f75849b | Yes | 2023-07-15
+| 1 | Professor | Maximus | maximus@professor.com | c4ca4238a0b923820dcc509a6f75849b | Yes | 2023-07-15 |
+| 2 | Jane | Doe | jane@doe.com | 098f6bcd4621d373cade4e832627b4f6 | Yes | 2023-07-16 |
+
+ The second table is the listing of all the subway stations and the services available at each station. 
+
+ Example:
+
+| station_id | station_name | washroom | accessibility | streetcar |
+| ------- | ----- | ---- | ----- | -------- |
+| 1 | Finch | Y | Y | N |
+| 1 | North York Centre | N | Y | N |
+| 1 | Sheppard-Yonge | Y | Y | N |
+
+
 
 ## Access
 
