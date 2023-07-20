@@ -1,9 +1,9 @@
 <?php
 
 $connect = mysqli_connect( 
-    "<<DB HOST>>", // Host
-    "<<DB USER>>", // Username
-    "<<DB PASSWORD>>", // Password
+    "<<DB_HOST>>", // Host
+    "<<DB_USER>>", // Username
+    "<<DB_PASSWORD>>", // Password
     "<<DATABASE>>" // Database
 );
 
